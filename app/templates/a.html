@@ -21,7 +21,7 @@
 				<h3>Task 1a</h3>
 			</div>
 			<div class="col-6">
-				<button class="btn btn-light float-right">
+				<button class="btn btn-light float-right" id="reset">
 					Reset
 				</button>
 			</div>
@@ -61,10 +61,24 @@
 			
 	</div>
 
-
 <script type="text/javascript">
-	// your solution here
-
+  $(document).ready(() => {
+   $('#reset').on('click',() => {
+   $('.p2-circle').show();
+  });                 
+  $('.p2-circle.bg-purple').on('click', () => {
+    $('.p2-circle.bg-purple').hide();
+  });
+  $('.p2-circle.bg-green').on('click',() => {
+    $('.p2-circle.bg-green,.p2-circle.bg-blue').hide();
+  });
+  $('.p2-circle.bg-orange.p2-border').click(function(){
+    $(this).siblings().parent().find('.p2-circle.bg-orange.p2-border').hide();
+  });
+  $('#gradient-circle').on('mouseover',()=>{
+    $('#gradient-circle').hide();
+  });
+});
 </script>
 </body>
 </html>
