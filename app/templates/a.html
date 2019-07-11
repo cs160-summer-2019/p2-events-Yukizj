@@ -73,7 +73,8 @@
     $('.p2-circle.bg-green,.p2-circle.bg-blue').hide();
   });
   $('.p2-circle.bg-orange.p2-border').click(function(){
-    $(this).siblings().parent().find('.p2-circle.bg-orange.p2-border').hide();
+    $('.p2-circle.bg-orange.p2-border').hide();
+    $(this).show();
   });
   $('#gradient-circle').on('mouseover',()=>{
     $('#gradient-circle').hide();
